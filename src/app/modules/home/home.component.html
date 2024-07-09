@@ -1,0 +1,110 @@
+<div class="h-screen w-screen flex">
+  <zn-loader></zn-loader>
+  <!-- SIde MENU  -->
+  <div class="h-full bg-gradient-to-b from-primary-600 to-primary-900 border-r-2 hidden lg:block">
+    <ng-container *ngTemplateOutlet="itemList"></ng-container>
+  </div>
+  <p-sidebar
+    [(visible)]="sidebarVisible"
+    styleClass="bg-gradient-to-b from-primary-600 to-primary-900"
+    [transitionOptions]="'450ms cubic-bezier(0, 0, 0.2, 1)'"
+  >
+    <ng-container *ngTemplateOutlet="itemList"></ng-container>
+  </p-sidebar>
+  <!-- MAIN CONTENT  -->
+  <div class="flex flex-col w-full h-full bg-primary-100">
+    <header class="flex flex-row items-center gap-10 p-1 h-[50px] justify-between">
+      <span
+
+        class="material-symbols-outlined px-4 lg:hidden"
+        (click)="toggleSideMenu()"
+      >
+        menu
+      </span>
+      <div class="hidden lg:flex flex-col leading-none">
+        <span class="text-xl font-semibold text-primary-800">Bahia Blanca</span>
+        <span class="text-gray-500 text-sm font-mono">
+          {{date | date: 'MMMM d'}}
+        </span>
+      </div>
+      <img src="./assets/img/mobile-logo.png" alt="" class="h-[50px]">
+      <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-red-600">
+          wifi_off
+          </span>
+        <span class="mr-4 relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-secondary-300 rounded-full">
+          <span>JR</span>
+        </span>
+      </div>
+    </header>
+    <main class="w-full">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+<!-- MENU TEMPLATE -->
+<ng-template #itemList>
+  <div class="flex flex-col justify-between h-full p-5" >
+    <img  src="./assets/img/mobile-logo.png" class="self-center mb-5 w-[100px]" />
+    <div class="">
+      @for (i of items; track i;) {
+      <a
+        *ngIf="i.permission"
+        class="flex gap-3 text-white items-center mb-2 hover:bg-primary-300 border-l-4 border-l-transparent pl-3 text-base !font-semibold py-2"
+        [routerLink]="i.routerLink"
+        routerLinkActive="!text-secondary-500 font-semibold !border-l-secondary-500"
+        ><span class="material-symbols-outlined">{{ i.icon }}</span>
+        <span class="">{{
+          i.label | translate
+        }}</span></a
+      >
+      }
+      <hr class="border-1 border-gray-500 my-3"/>
+      <!--
+      <a
+        class="flex gap-2 items-center mb-2 hover:bg-primary-300 border-l-4 border-l-white pl-3 text-base !font-semibold pb-4"
+        [routerLink]="'settings'"
+        routerLinkActive="text-primary-500 font-semibold border-l-primary-500"
+        pTooltip="{{ 'generic.settings' | translate }}"
+        ><span class="material-symbols-outlined">settings</span>
+        <span class="" *ngIf="!sidebarCompact">{{
+          "generic.settings" | translate
+        }}</span></a
+      > -->
+      <a
+         class="bg-secondary-700 w-full flex text-white py-2 px-3 mt-4 hover:text-secondary-500"
+         [routerLink]="'/login'"
+         >
+         <span class="material-symbols-outlined">logout</span>
+         <span class="pl-2">{{'sidemenu.logout' | translate}}</span>
+      </a>
+    </div>
+    <span class="grow"></span>
+    <div class="flex flex-row">
+      <ng-container >
+         <!-- <img
+            *ngIf="user.profileImg; else loggedOut"
+            class="rounded-full img-card cursor-pointer z-10 transition-opacity duration-300 hover:opacity-75"
+            [src]="srcImage"
+            alt="User"
+            [routerLink]="['settings']"
+         />
+         <ng-template #loggedOut>
+            <img [routerLink]="['settings']" src="./assets/img/userWakeur.png" alt="User" class="rounded-full img-card cursor-pointer z-10 transition-opacity duration-300 hover:opacity-75"/>
+         </ng-template> -->
+      </ng-container>
+      <div class="truncate flex flex-row items-center gap-2">
+         <!-- <p [routerLink]="['settings']" class="cursor-pointer hover:text-primary-500 truncate font-semibold text-base">
+            {{ user.firstName}}
+         </p>
+         <p [routerLink]="['settings']" class=" cursor-pointer hover:text-primary-500 truncate font-semibold text-base">
+            {{ user.lastName }}
+         </p> -->
+         <span class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-slate-300 rounded-full">
+          <span>JR</span>
+         </span>
+         <span>Jhonn Roberts</span>
+      </div>
+    </div>
+  </div>
+</ng-template>

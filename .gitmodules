@@ -1,0 +1,9 @@
+[submodule "src/app/core/zn30-core-viewer"]
+	path = src/app/core/zn30-core-viewer
+	url = git@github.com:TutatorDev/zn30-core-viewer.git
+[submodule "src/app/core/zn30-core-forms"]
+	path = src/app/core/zn30-core-forms
+	url = git@github.com:TutatorDev/zn30-core-forms.git
+[submodule "src/app/core/zn30-core-browser"]
+	path = src/app/core/zn30-core-browser
+	url = git@github.com:TutatorDev/zn30-core-browser.git

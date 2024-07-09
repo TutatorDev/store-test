@@ -1,0 +1,20 @@
+@layer components {
+  .btn{
+    @apply flex items-center gap-1 py-2 px-3 text-base font-semibold rounded-md  dark:text-slate-100 hover:bg-primary-200 dark:hover:bg-primary-600;
+    &-primary {
+      @apply bg-primary-500 dark:bg-primary-300 text-white hover:bg-primary-600 focus:ring-primary-300;
+    }
+    &-secondary {
+      @apply bg-secondary-500 dark:bg-secondary-300 text-white hover:bg-secondary-600 focus:ring-secondary-300;
+    }
+    &-primary-outline {
+      @apply bg-transparent border border-primary-500 text-primary-500 dark:text-primary-300 hover:bg-primary-500 hover:text-white focus:ring-primary-300;
+    }
+    &-secondary-outline {
+      @apply bg-transparent border border-secondary-500 text-secondary-500 dark:text-secondary-300 hover:bg-secondary-500 hover:text-white focus:ring-secondary-300;
+    }
+  }
+  .btn-circle {
+    @apply rounded-full border border-gray-400 p-2 shadow-md flex hover:bg-primary-300;
+  }
+}

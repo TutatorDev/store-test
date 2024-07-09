@@ -1,0 +1,44 @@
+{
+  "ZnForms": {
+    "requiered_error": "El campo es requerido",
+    "minlength_error": "This field must contain at least {{v1}} characters.",
+    "maxlength_error": "This field must contain no more than {{v1}} characters.",
+    "email_error": "This field must contain a valid email address.",
+    "minCheck_error": "You need to select at least {{v1}} options.",
+    "unique_error": "This field must contain a unique value.",
+    "select_option": "Seleccione una opción"
+  },
+  "ZnBrowser": {
+    "fields": "Campos",
+    "filter": "Filtro",
+    "list_view": "Vista de Lista",
+    "table_view": "Vista de Tabla",
+    "results_match": "Resultados que coinciden con",
+    "following_rules": "las siguientes reglas:",
+    "and_all": "Todos (y)",
+    "or_any": "Cualquiera (o)",
+    "eq": "Igual a",
+    "ne": "Diferente de"
+  },
+  "settings": {
+    "preferences": "Preferencias",
+    "language": "Lenguaje",
+    "theme": "Tema",
+    "account": "Cuenta",
+    "density": "Densidad",
+    "high": "Alta",
+    "medium": "Media",
+    "low": "Baja"
+  },
+  "lang": {
+    "en": "Ingles",
+    "es": "Espanol",
+    "fr": "Francés"
+  },
+  "test":{
+    "selectName": "Lista desplegable con traducción",
+    "sliderName": "Control deslizante con traducción",
+    "textName": "Texto con traducción",
+    "textareaName": "Área de texto con traducción"
+  }
+}

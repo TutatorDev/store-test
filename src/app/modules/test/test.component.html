@@ -1,0 +1,42 @@
+<div>
+  <p-tabView>
+    <p-tabPanel header="View Mode">
+      <div class="lg:mx-20 bg-slate-100 rounded-md shadow-md p-4 flex flex-col items-center">
+        <div class="flex flex-row items-center justify-between w-full">
+          <h2 class="text-lg font-semibold text-primary-800">Profile</h2>
+          <button class="btn btn-primary" (click)="showModal()">
+            <span class="material-symbols-outlined text-[18px]">
+              edit
+            </span>
+            <span>Edit</span>
+          </button>
+        </div>
+        <img src="https://cdn.geekwire.com/wp-content/uploads/2014/09/elonmusk.jpeg" class="h-[100px]">
+        <zn-viewer [schema]="fields" [data]="data" class="w-full"/>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Form 1">
+      <div class="lg:mx-20 bg-slate-100 rounded-md shadow-md p-4 flex flex-col calc overflow-auto">
+      <zn-forms
+      [fields]="formSchema2"
+      />
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Header III">
+      <div class="calc">
+        <zn-browser
+        [columns]="columns"
+        [getDataService]="getData"
+        [headerType]="'normal'"
+        />
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+<p-dialog header="Edit Profile" [modal]="true" [(visible)]="viewEditForm">
+<zn-forms
+[fields]="formSchema"
+[data]="data"
+(onFormChange)="onFormChange($event)"
+/>
+</p-dialog>

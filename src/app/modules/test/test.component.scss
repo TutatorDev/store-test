@@ -1,0 +1,15 @@
+:host ::ng-deep .p-tabview-nav{
+background-color: transparent;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: transparent;
+}
+
+:host ::ng-deep .p-tabview-panels {
+  background: transparent;
+}
+
+.calc {
+  height: calc(100vh - 140px);
+}

@@ -1,0 +1,59 @@
+<p-toast></p-toast>
+<div class="bg-slate-100 dark:bg-gray-900">
+  <div class="flex justify-center h-screen">
+    <!-- LEFT SIDE -->
+    <div
+      class="hidden bg-cover lg:block lg:w-2/3"
+      style="
+        background-image: url(https://th.bing.com/th/id/R.e14a0832db1463628279551daf358699?rik=KQWG%2bA%2bpwODDog&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fAmazing-wallpapers-HD.jpg&ehk=xD%2bZgtbPbNVDPdOikJJf14zZzYGrqHVuEw7tqXBN2Tg%3d&risl=&pid=ImgRaw&r=0);
+      "
+    >
+      <div class="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
+        <div>
+          <h2 class="text-4xl font-bold text-white">Tutator Zinc</h2>
+
+          <p class="max-w-xl mt-3 text-gray-300">
+            Tutator Zinc is a web platform that allows users to create
+            applications that synchronize and work offline. Through Zinc, users
+            can develop applications with these features, fostering a passion
+            for learning
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT SIDE FORM -->
+    <div class="flex items-center w-full max-w-md px-3 mx-auto lg:w-2/6">
+      <div class="flex-1 p-3 border border-primary-900 shadow bg-white">
+        <div class="text-center">
+          <h2
+            class="text-4xl font-bold text-center text-gray-700 dark:text-white"
+          >
+            Tutator Zinc
+          </h2>
+
+          <p class="mt-3 text-gray-500 dark:text-gray-300">
+            {{ "login.message" | translate }}
+          </p>
+        </div>
+
+        <div class="mt-8">
+          <zn-forms
+            [fields]="fields"
+            (onFormChange)="fchange($event)"
+            [showValidations]="showValidations"
+            (enterKeyPressed)="isEnterKeyPressed()"
+          >
+          </zn-forms>
+          <!-- FOOTER -->
+           <button class="btn btn-primary" (click)="login()">Login</button>
+          <div class="flex flex-col items-center justify-center">
+            <p class="text-sm text-gray-600 font-normal tracking-[1px] mb-1">
+              Version {{ platformVersion }}
+            </p>
+            <p class="text-xs text-gray-600">Copyright © 2024 Tutator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

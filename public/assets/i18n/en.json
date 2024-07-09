@@ -1,0 +1,74 @@
+{
+
+  "login": {
+    "message": "Sign in to access your account"
+  },
+  "sidemenu": {
+    "logout": "Logout"
+  },
+  "ZnForms": {
+    "requiered_error": "This field is required.",
+    "minlength_error": "This field must contain at least {{v1}} characters.",
+    "maxlength_error": "This field must contain no more than {{v1}} characters.",
+    "email_error": "This field must contain a valid email address.",
+    "minCheck_error": "You need to select at least {{v1}} options.",
+    "unique_error": "This field must contain a unique value.",
+    "select_option": "Select an option",
+    "match_error": "Don't match.",
+    "minDate_field": "The date cannot be lower than the previous one."
+  },
+  "ZnBrowser": {
+    "fields": "Fields",
+    "filter": "Filter",
+    "list_view": "List View",
+    "table_view": "Table View",
+    "empty_search": "No results found for the search criteria.",
+    "results_match": "Results match",
+    "following_rules": "of the Following Rules:",
+    "and_all": "All (and)",
+    "or_any": "Any (or)",
+    "eq": "Equal to",
+    "ne": "Not equal to"
+  },
+  "settings": {
+    "preferences": "Preferences",
+    "language": "Language",
+    "theme": "Theme",
+    "account": "Account",
+    "density": "Density",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "lang": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French"
+  },
+  "test":{
+    "selectName": "Dropdown with translation",
+    "sliderName": "Slider with translation",
+    "textName": "Text with translation",
+    "textareaName": "Textarea with translation"
+  },
+  "user": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "birthDate": "Birth date",
+    "phone": "Phone",
+    "email": "E-mail",
+    "address": "Address",
+    "password": "Password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password"
+  },
+  "menu":{
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "rra": "RRA list",
+    "transactions": "Transaction history",
+    "plastic": "Plastic prices",
+    "setting": "Setting"
+  }
+
+}
